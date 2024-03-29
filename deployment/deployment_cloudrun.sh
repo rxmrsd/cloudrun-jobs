@@ -6,5 +6,4 @@ gcloud beta run jobs create ${JOB_NAME} \
     --project=${PROJECT_ID} \
     --region=${REGION} \
     --max-retries=0 \
-    --args=store_list,category_list \
-    
+    --args=temp_list1,temp_list2 \

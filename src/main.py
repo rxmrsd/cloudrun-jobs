@@ -1,30 +1,33 @@
 """main.py"""
 import json
+import logging
 
 import click
+
+logging.basicConfig(level=logging.INFO)
 
 
 @click.command()
 @click.option(
-    "--store_list",
+    "--temp_list1",
     type=str,
     required=True,
 )
 @click.option(
-    "--category_list",
+    "--temp_list2",
     type=str,
     required=True,
 )
-def main(store_list: str, category_list: str) -> None:
-    print(f"{store_list}: type: {type(store_list)}")
-    print(f"{category_list}: type: {type(category_list)}")
+def main(temp_list1: str, temp_list2: str) -> None:
+    logging.info(f"{temp_list1}: type: {type(temp_list1)}")
+    logging.info(f"{temp_list2}: type: {type(temp_list2)}")
 
-    _store_list = json.loads(store_list)
-    for _store in _store_list:
-        print(f"{_store}: type: {type(_store)}")
-    _category_list = json.loads(category_list)
-    for _category in _category_list:
-        print(f"{_category}: type: {type(_category)}")
+    _temp_list1 = json.loads(temp_list1)
+    for _temp in _temp_list1:
+        logging.info(f"{_temp}: type: {type(_temp)}")
+    _temp_list2 = json.loads(temp_list2)
+    for _temp in _temp_list2:
+        logging.info(f"{_temp}: type: {type(_temp)}")
 
 
 if __name__ == "__main__":
