@@ -2,9 +2,9 @@
 
 from google.cloud import run_v2
 
-PROJECT_ID = "daifuku-development"
-LOCATION = "asia-northeast1"
-JOBS = "jobs-sample"
+PROJECT_ID = "***"
+LOCATION = "***"
+JOBS = "***"
 
 
 def main() -> None:
@@ -17,8 +17,8 @@ def main() -> None:
                 {
                     "args":
                         [
-                            "--store_list=[111, 122]",
-                            '--category_list=["333", "444"]',
+                            "--temp_list1=[111, 122]",
+                            '--temp_list2=["333", "444"]',
                         ],
                 },
             ],
